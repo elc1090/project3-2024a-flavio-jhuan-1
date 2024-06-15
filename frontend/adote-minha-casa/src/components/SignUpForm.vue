@@ -9,7 +9,7 @@
         </div>
         <div class="form-group">
           <label for="password">Nome:</label>
-          <input type="password" id="password" v-model="name" required>
+          <input type="text" id="password" v-model="name" required>
         </div>
         <div class="form-group">
           <label for="password">Senha:</label>
@@ -43,6 +43,10 @@ export default {
       console.log('Name:', this.name);
       console.log('Password:', this.password);
       console.log('PasswordConf:', this.passwordConf);
+
+      if (this.password !== this.passwordConf) {
+        alert('As senhas não conferem');
+      }
     }
   }
 };
