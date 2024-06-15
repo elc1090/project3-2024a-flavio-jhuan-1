@@ -1,51 +1,5 @@
 <template>
   <div class="login-container">
-    <nav
-    class="navbar navbar-main navbar-expand-lg container-fluid px-3 pt-3 pb-3 shadow-none border-radius-xl"
-    id="navbarBlur"
-    data-scroll="true"
-  >
-    <div class="px-4 py-1 pt-3 pb-4 backgr container bg-white">
-      <!--Imagem do cliente-->
-      <nav aria-label="breadcrumb">
-      </nav>
-      <!--Trecho copiado de PageLaoyout/Navbar.vue-->
-      <button
-        @click="changeShowNav"
-        class="shadow-none navbar-toggler ms-2"
-        type="button"
-        data-bs-toggle="collapse"
-        data-bs-target="#navigation"
-        aria-controls="navigation"
-        aria-expanded="false"
-        aria-label="Toggle navigation"
-      >
-        <span class="mt-2 navbar-toggler-icon">
-          <span class="navbar-toggler-bar bar1"></span>
-          <span class="navbar-toggler-bar bar2"></span>
-          <span class="navbar-toggler-bar bar3"></span>
-        </span>
-      </button>
-
-      <div class="collapse navbar-collapse" id="navigation" :class="{ 'd-block': display}">
-        <ul class="navbar-nav ms-auto text-left">
-          <br />
-          <li class="nav-item">
-            <router-link class="nav-link me-2 fs-4" to="/">
-              <i class="ni ni-tv-2 me-1 fw-bold"></i>
-              Início
-            </router-link>
-          </li>
-          <li class="nav-item">
-            <router-link class="nav-link me-2 fs-4" to="/login">
-              <i class="fas fa-sign-in-alt me-1"></i>
-              Entrar
-            </router-link>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </nav>
     <h1>Login</h1>
     <form @submit.prevent="login">
       <div class="form-group">

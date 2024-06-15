@@ -22,6 +22,9 @@
           <li class="nav-item">
             <a class="nav-link" href="#">Contato</a>
           </li>
+          <button class="button" @click="selectRole">
+            <i class="fas  fa-angle-double-left text-gray"></i>
+          </button>
         </ul>
       </div>
     </div>
@@ -31,11 +34,8 @@
 export default {
   methods: {
     selectRole(role) {
-      // Aqui você pode adicionar a lógica para redirecionar o usuário para a página correta com base na escolha do papel (doador ou recebedor)
       if (role === 'doador') {
-        // Redirecionar para a página do doador
       } else if (role === 'recebedor') {
-        // Redirecionar para a página do recebedor
       }
     }
   }
