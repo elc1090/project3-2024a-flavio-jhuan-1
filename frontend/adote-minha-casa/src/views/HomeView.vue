@@ -39,7 +39,24 @@ export default {
 
 }
 </script>
+<<<<<<< HEAD
 
+=======
+
+<style>
+.backgr {
+  border-radius: 10px;
+  box-shadow: 3px 3px 7px rgba(0, 0, 0, 0.1);
+}
+
+.nav-item:hover {
+  background-color: rgba(211, 211, 211, 0.5);
+  transition: 0.5s;
+  border-radius: 10px;
+}
+</style>
+
+>>>>>>> flavionofront
 <style scoped>
 header {
   margin-bottom: 20px;
