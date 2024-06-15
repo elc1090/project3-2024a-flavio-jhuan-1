@@ -12,6 +12,15 @@
       </div>
     </section>
 
+    <InfoCard
+        id="1"
+        imageSrc="@/assets/cerca.jpg"
+        title="Título"
+        description="Minha casa caiu"
+        ownerName="Marsio"
+        totalDonations="987651"
+      />
+
 
     <section class="py-5">
       <div class="container text-center">
@@ -29,12 +38,14 @@
 <script>
 import Header from '@/components/Header.vue'
 import Footer from '@/components/Footer.vue'
+import InfoCard from '@/components/InfoCard.vue';
 
 export default {
   name: 'HomePage',
   components: {
     Header,
-    Footer
+    Footer,
+    InfoCard
   },
 
   data() {
