@@ -30,6 +30,7 @@
     </div>
   </nav>
 </template>
+
 <script>
 export default {
   methods: {
@@ -41,6 +42,7 @@ export default {
   }
 }
 </script>
+
 <style>
 .backgr {
   border-radius: 10px;
@@ -53,6 +55,7 @@ export default {
   border-radius: 10px;
 }
 </style>
+
 <style scoped>
 .img {
   height: 70px;
