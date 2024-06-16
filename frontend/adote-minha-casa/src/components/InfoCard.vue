@@ -1,6 +1,6 @@
 <template>
   <div class="info-card">
-    <img :src="imageSrc" alt="Imagem do Cartão" class="info-card-image">
+    <img :src="imageSrc" alt="Imagem Indisponível" class="info-card-image">
     <div class="info-card-content">
       <h3>{{ title }}</h3>
       <p>{{ description }}</p>
@@ -16,8 +16,8 @@ export default {
   name: 'InfoCard',
   props: {
     id : {
-        type: String,
-        required: true
+      type: String,
+      required: true
     } ,
     imageSrc: {
       type: String,
@@ -45,6 +45,11 @@ export default {
       // Lógica para o clique do botão
       alert('Botão clicado!' + this.id);
     }
+  },
+  data() {
+    return {
+      id: ''
+    };
   }
 };
 </script>

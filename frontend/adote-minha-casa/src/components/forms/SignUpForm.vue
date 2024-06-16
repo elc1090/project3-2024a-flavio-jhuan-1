@@ -4,20 +4,20 @@
       <h1>Crie uma conta</h1>
       <form @submit.prevent="sign_up">
         <div class="form-group">
-          <label for="password">Email:</label>
-          <input type="email" id="email" v-model="email" required>
+          <label for="signemail">Email:</label>
+          <input type="email" id="signemail" v-model="email" required>
         </div>
         <div class="form-group">
-          <label for="password">Nome:</label>
-          <input type="text" id="password" v-model="name" required>
+          <label for="signname">Nome:</label>
+          <input type="text" id="signname" v-model="name" required>
         </div>
         <div class="form-group">
-          <label for="password">Senha:</label>
-          <input type="password" id="password" v-model="password" required>
+          <label for="signpassword">Senha:</label>
+          <input type="password" id="signpassword" v-model="password" required>
         </div>
         <div class="form-group">
-          <label for="password">Confirme sua senha:</label>
-          <input type="password" id="password" v-model="passwordConf" required>
+          <label for="signpassword2">Confirme sua senha:</label>
+          <input type="password" id="signpassword2" v-model="passwordConf" required>
         </div>
         <button type="submit">SignUp</button>
       </form>
