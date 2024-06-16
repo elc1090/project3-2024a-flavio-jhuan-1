@@ -1,10 +1,8 @@
 <template>
   <Header />
   <main class="d-flex justify-content-evenly flex-wrap">
-    <LoginForm />
-    <SingUpForm />
-
-
+    <RequirementForm />
+    <img style="max-width:30%" src="@/assets/logo.svg" alt="exemplo" class="w-50" />
   </main>
 
   <Footer />
@@ -13,16 +11,14 @@
 <script>
 import Header from '@/components/Header.vue'
 import Footer from '@/components/Footer.vue'
-import LoginForm from '@/components/forms/LoginForm.vue'
-import SingUpForm from '@/components/forms/SignUpForm.vue'
+import RequirementForm from '@/components/forms/RequirementForm.vue'
 
 export default {
   name: 'Login',
   components: {
     Header,
     Footer,
-    LoginForm,
-    SingUpForm
+    RequirementForm
   }
 };
 </script>

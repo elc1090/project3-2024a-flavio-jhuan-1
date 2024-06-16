@@ -20,7 +20,6 @@ export default {
 
 <style scoped>
 footer {
-  margin-top: 20px;
   background-color: var(--deep-blue);
 }
 </style>

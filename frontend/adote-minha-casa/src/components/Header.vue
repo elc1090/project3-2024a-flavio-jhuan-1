@@ -3,7 +3,7 @@
   <header class="text-white">
     <div class="container d-flex justify-content-between align-items-center py-3">
       <div>
-        <img :src="logo" alt="Logo" class="img-fluid" style="max-height: 100px;">
+        <img :src="logo" alt="Logo" class="img-fluid" style="height: 80px;">
       </div>
       <nav class="navbar navbar-expand-lg navbar-light">
         <div class="collapse navbar-collapse" id="navbarNav">
@@ -18,7 +18,7 @@
               <a class="nav-link text-white" href="#">Quero Doar</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link text-white" href="#">Preciso de Ajuda</a>
+              <a class="nav-link text-white" href="/requirement">Preciso de Ajuda</a>
             </li>
             <li class="nav-item">
               <a class="nav-link text-white" href="/login">Login</a>
@@ -34,7 +34,7 @@
 </template>
 
 <script>
-import logo from '@/assets/white.jpg'
+import logo from '@/assets/logo.svg'
 
 export default {
   name: 'Header',
@@ -49,6 +49,11 @@ export default {
 <style scoped>
 header {
   background-color: var(--deep-blue);
-  margin-bottom: 20px;
+}
+
+a{
+  color: white;
+  font-size: 1.2rem;
+  margin-left: 20px;
 }
 </style>
