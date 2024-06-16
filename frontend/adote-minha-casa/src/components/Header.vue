@@ -3,7 +3,9 @@
   <header class="text-white">
     <div class="container d-flex justify-content-between align-items-center py-3">
       <div>
-        <img :src="logo" alt="Logo" class="img-fluid" style="height: 80px;">
+        <a href="/">
+          <img :src="logo" alt="Logo" class="img-fluid" style="height: 80px;">
+        </a>
       </div>
       <nav class="navbar navbar-expand-lg navbar-light">
         <div class="collapse navbar-collapse" id="navbarNav">
