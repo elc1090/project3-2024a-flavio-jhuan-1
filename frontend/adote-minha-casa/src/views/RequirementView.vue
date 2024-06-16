@@ -2,7 +2,7 @@
   <Header />
   <main class="d-flex justify-content-evenly py-5">
     <RequirementForm />
-    <aside id="aside1" class="w-50 align-content-center text-white">
+    <aside id="aside1" class="w-50 align-content-center text-white d-none d-md-block">
       <h2 class="text-center">Contecte-se com Doadores do Brasil Inteiro</h2>
       <p class="text-center">Se você precisa de ajuda, preencha o formulário</p>
     </aside>

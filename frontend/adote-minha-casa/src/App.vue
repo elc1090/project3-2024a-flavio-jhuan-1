@@ -9,6 +9,7 @@ import { RouterLink, RouterView } from 'vue-router'
 <style>
 :root{
   --deep-blue: #273043;
+  --light-blue: #6577b5;
   --white-background: #EFEFEF;
 }
 

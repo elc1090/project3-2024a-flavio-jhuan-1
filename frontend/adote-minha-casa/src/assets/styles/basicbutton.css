@@ -3,3 +3,9 @@
     background-color: var(--deep-blue);
     color: white;
 }
+
+.light-button{
+    background-color: var(--light-blue);
+    color: var(--deep-blue);
+    padding: 10px;
+}

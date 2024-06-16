@@ -4,9 +4,15 @@
       <h1>Iniciar Pedido de Ajuda</h1>
       <form @submit.prevent="submit">
         <div class="form-group">
-          <label for="address">Endereço:</label>
-          <input type="email" id="address" v-model="address" required>
+          <label for="cep">CEP:</label>
+          <input @change="handle_cep" type="text" id="cep" v-model="cep" required>
         </div>
+        <span id="address_success" style="display:none">
+            
+        </span>
+        <span id="address_fail" style="display:none">
+            <p style="color:red;">Informe um CEP válido</p>
+        </span>
         <div class="form-group">
           <label for="value">Estimativa para reparação:</label>
           <input type="text" id="value" v-model="value" required>
@@ -34,12 +40,17 @@
 </template>
 
 <script>
-
 export default {
   name: 'RequirementForm',
   data() {
     return {
-      address: '',
+      cep: '',
+        cidade: '',
+        bairro: '',
+        rua: '',
+        estado: '',
+
+
       value: '',
       description: '',
       text: '',
@@ -49,12 +60,49 @@ export default {
   },
   methods: {
     submit() {
-      console.log('Endereço:', this.address);
+      console.log('Endereço:', this.cep);
       console.log('Estimativa:', this.value);
       console.log('Descrição:', this.description);
       console.log('Descrição detalhada:', this.text);
       console.log('Chave Pix:', this.pix);
       console.log('Whatzapp:', this.phoneNumber);
+    },
+
+    handle_cep(event) {
+  		const value = event.target.value;
+      const url = `https://viacep.com.br/ws/${value}/json/`;
+
+      const errorElement = document.getElementById('address_fail');
+      const successElement = document.getElementById('address_success');
+      successElement.innerHTML = '';
+      errorElement.innerHTML = '';
+      fetch(url)
+      .then( response => response.json())
+      .then( json => {
+      		
+          if( json.logradouro ) {
+            console.log(json)
+            errorElement.style.display = 'none';
+            successElement.style.display = 'block';
+            successElement.innerHTML = `
+              <p>Rua: ${json.logradouro}</p>
+              <p>Bairro: ${json.bairro}</p>
+              <p>Cidade: ${json.localidade}</p>
+              <p>Estado: ${json.uf}</p>
+              <hr>
+            `;
+
+            this.cep = json.cep;
+            this.cidade = json.localidade;
+            this.bairro = json.bairro;
+            this.rua = json.logradouro;
+            this.estado = json.uf;
+          }
+      }).catch( _ => {
+        errorElement.style.display = 'block';
+        successElement.style.display = 'none';
+
+      });
     }
   }
 };
