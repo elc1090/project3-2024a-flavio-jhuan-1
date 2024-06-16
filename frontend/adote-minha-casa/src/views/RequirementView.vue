@@ -1,8 +1,11 @@
 <template>
   <Header />
-  <main class="d-flex justify-content-evenly flex-wrap">
+  <main class="d-flex justify-content-evenly py-5">
     <RequirementForm />
-    <img style="max-width:30%" src="@/assets/logo.svg" alt="exemplo" class="w-50" />
+    <aside id="aside1" class="w-50 align-content-center text-white">
+      <h2 class="text-center">Contecte-se com Doadores do Brasil Inteiro</h2>
+      <p class="text-center">Se você precisa de ajuda, preencha o formulário</p>
+    </aside>
   </main>
 
   <Footer />
@@ -22,3 +25,14 @@ export default {
   }
 };
 </script>
+
+<style scoped>
+#aside1{
+  background-image: 
+  linear-gradient( rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2) ), url('@/assets/maos.jpg');
+  color: white;
+  background-size: cover;
+  background-position: center;
+  border-radius: 50px;
+}
+</style>

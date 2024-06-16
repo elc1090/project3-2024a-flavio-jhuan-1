@@ -6,9 +6,15 @@
     <section class="py-5" id="section1">
       <div class="container text-center">
         <h2 class="mb-4">Adote Minha Casa</h2>
-        imagem chocante <br>
-        motivação <br>
-        que tristeza <br>
+        <p style="font-size:20px">Unindo pessoas que precisam de ajuda com pessoas dispostas a ajudar.</p>
+        <p style="font-size:20px">Unindo pessoas que precisam de ajuda com pessoas dispostas a ajudar.</p>
+        <p style="font-size:20px">Unindo pessoas que precisam de ajuda com pessoas dispostas a ajudar.</p>
+        <p style="font-size:20px">Unindo pessoas que precisam de ajuda com pessoas dispostas a ajudar.</p>
+        <p style="font-size:20px">Unindo pessoas que precisam de ajuda com pessoas dispostas a ajudar.</p>
+        <p style="font-size:20px">Unindo pessoas que precisam de ajuda com pessoas dispostas a ajudar.</p>
+        <p style="font-size:20px">Unindo pessoas que precisam de ajuda com pessoas dispostas a ajudar.</p>
+        <p style="font-size:20px">Unindo pessoas que precisam de ajuda com pessoas dispostas a ajudar.</p>
+
       </div>
     </section>
 
@@ -112,7 +118,8 @@ section{
 }
 
 #section1{
-  background-image: url('../assets/cerca.jpg');
+  background-image: linear-gradient( rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.4) ),
+                    url('@/assets/casa.jpg');
   color: white;
   background-size: cover;
 }
