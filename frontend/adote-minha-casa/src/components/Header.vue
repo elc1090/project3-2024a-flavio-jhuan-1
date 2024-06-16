@@ -3,8 +3,9 @@
   <header class="text-white">
     <div class="container d-flex justify-content-between align-items-center py-3">
       <div>
-        <a href="/">
-          <img :src="logo" alt="Logo" class="img-fluid" style="height: 80px;">
+        <a href="/" class="d-flex flex-column align-items-center" style="text-decoration: none;">
+          <img :src="logo" alt="Logo" class="img-fluid mb-3" style="max-width:80px; max-height: 80px;">
+          <p >Adote Minha Casa</p>
         </a>
       </div>
       <nav class="navbar navbar-expand navbar-light wrap">
