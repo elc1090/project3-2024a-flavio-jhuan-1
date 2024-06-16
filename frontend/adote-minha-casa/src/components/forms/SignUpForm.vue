@@ -19,7 +19,7 @@
           <label for="signpassword2">Confirme sua senha:</label>
           <input type="password" id="signpassword2" v-model="passwordConf" required>
         </div>
-        <button type="submit">SignUp</button>
+        <button type="submit" class="btn basicbutton">SignUp</button>
       </form>
     </div>
 

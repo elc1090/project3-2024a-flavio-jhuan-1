@@ -16,8 +16,8 @@
       <div class="text-center d-flex flex-column align-items-center">
         <h2 class="mb-4">Comece a doar</h2>
         <Carousel :slides="carouselSlides"/>
-        <a href="/search" class="btn btn-primary" 
-          style="background-color: var(--deep-blue); border: none;">Ver mais</a>
+        <a href="/search" class="btn basicbutton" 
+          style="margin-top: 10px;">Ver mais</a>
       </div>
     </section>
 
@@ -103,6 +103,9 @@ export default {
   }
 }
 </script>
+
+<style lang="css" src="@/assets/styles/basicbutton.css"></style>
+
 
 <style scoped>
 section{

@@ -28,7 +28,7 @@
           <input type="tel" id="phoneNumber" v-model="phoneNumber" required>
         </div>
         
-        <button type="submit">Abrir Requerimento</button>
+        <button type="submit" class="btn basicbutton">Abrir Requerimento</button>
       </form>
     </div>
 </template>

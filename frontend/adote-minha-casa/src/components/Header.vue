@@ -7,7 +7,7 @@
           <img :src="logo" alt="Logo" class="img-fluid" style="height: 80px;">
         </a>
       </div>
-      <nav class="navbar navbar-expand-lg navbar-light">
+      <nav class="navbar navbar-expand navbar-light wrap">
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav">
             <li class="nav-item active">
