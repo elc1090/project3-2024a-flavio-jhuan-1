@@ -16,7 +16,8 @@
       <div class="text-center d-flex flex-column align-items-center">
         <h2 class="mb-4">Comece a doar</h2>
         <Carousel :slides="carouselSlides"/>
-        <!-- botao para outros sldes -->
+        <a href="/search" class="btn btn-primary" 
+          style="background-color: var(--deep-blue); border: none;">Ver mais</a>
       </div>
     </section>
 

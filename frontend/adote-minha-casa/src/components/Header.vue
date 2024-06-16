@@ -15,7 +15,7 @@
               <a class="nav-link text-white" href="/about">Sobre</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link text-white" href="#">Quero Doar</a>
+              <a class="nav-link text-white" href="/search">Quero Doar</a>
             </li>
             <li class="nav-item">
               <a class="nav-link text-white" href="/requirement">Preciso de Ajuda</a>
