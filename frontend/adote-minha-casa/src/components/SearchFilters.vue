@@ -14,12 +14,6 @@
             <input type="text" id="state" class="form-control" v-model="filters.state" placeholder="Digite o estado">
           </div>
         </div>
-        <div class="col-md-4">
-          <div class="form-group">
-            <label for="value">Valor</label>
-            <input type="number" id="value" class="form-control" v-model="filters.value" placeholder="Digite o valor">
-          </div>
-        </div>
       </div>
       <div class="row mt-3">
         <div class="col-md-12 text-right">

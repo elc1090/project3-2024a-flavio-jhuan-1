@@ -8,7 +8,6 @@
           <input @change="handle_cep" type="text" id="cep" v-model="cep" required>
         </div>
         <span id="address_success" style="display:none">
-            
         </span>
         <span id="address_fail" style="display:none">
             <p style="color:red;">Informe um CEP válido</p>
@@ -18,12 +17,12 @@
           <input type="text" id="value" v-model="value" required>
         </div>
         <div class="form-group">
-          <label for="description">Breve descrição:</label>
-          <input type="text" id="description" v-model="description" required>
+          <label for="title">Breve descrição:</label>
+          <input type="text" id="title" v-model="title" required>
         </div>
         <div class="form-group">
           <label for="text">Descrição detalhada:</label>
-          <input type="text" id="text" v-model="text" required>
+          <input type="text" id="text" v-model="description" required>
         </div>
         <div class="form-group">
           <label for="pix">Chave Pix:</label>
@@ -40,32 +39,43 @@
 </template>
 
 <script>
+import {sendPostHouses} from '@/scripts/houses.js';
+
 export default {
   name: 'RequirementForm',
   data() {
     return {
       cep: '',
-        cidade: '',
+        city: '',
         bairro: '',
-        rua: '',
-        estado: '',
+        address: '',
+        state: '',
 
 
       value: '',
+      title: '',
       description: '',
-      text: '',
       pix: '',
       phoneNumber: ''
     };
   },
   methods: {
     submit() {
-      console.log('Endereço:', this.cep);
-      console.log('Estimativa:', this.value);
-      console.log('Descrição:', this.description);
-      console.log('Descrição detalhada:', this.text);
-      console.log('Chave Pix:', this.pix);
-      console.log('Whatzapp:', this.phoneNumber);
+      data = {
+        "cadastred_by_user_id": "1",
+        "title": this.title,
+        "description": this.description,
+        "pixkey": this.pix,
+        "address": this.address,
+        "city": this.city,
+        "state": this.state,
+        // "value": this.value,
+        // "bairro": this.bairro,
+        // "cep": this.cep,
+        // "phoneNumber": this.phoneNumber
+        //
+      };
+      sendPostHouses(data);
     },
 
     handle_cep(event) {
@@ -93,10 +103,10 @@ export default {
             `;
 
             this.cep = json.cep;
-            this.cidade = json.localidade;
+            this.city = json.localidade;
             this.bairro = json.bairro;
-            this.rua = json.logradouro;
-            this.estado = json.uf;
+            this.address = json.logradouro;
+            this.state = json.uf;
           }
       }).catch( _ => {
         errorElement.style.display = 'block';

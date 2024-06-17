@@ -26,7 +26,6 @@
           style="margin-top: 10px;">Ver mais</a>
       </div>
     </section>
-
     <Footer />
   </div>
 </template>
