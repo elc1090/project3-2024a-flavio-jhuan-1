@@ -6,15 +6,18 @@
     <section class="py-5" id="section1">
       <div class="container text-center">
         <h2 class="mb-4">Adote Minha Casa</h2>
-        <p style="font-size:20px">Unindo pessoas que precisam de ajuda com pessoas dispostas a ajudar.</p>
-        <p style="font-size:20px">Unindo pessoas que precisam de ajuda com pessoas dispostas a ajudar.</p>
-        <p style="font-size:20px">Unindo pessoas que precisam de ajuda com pessoas dispostas a ajudar.</p>
-        <p style="font-size:20px">Unindo pessoas que precisam de ajuda com pessoas dispostas a ajudar.</p>
-        <p style="font-size:20px">Unindo pessoas que precisam de ajuda com pessoas dispostas a ajudar.</p>
-        <p style="font-size:20px">Unindo pessoas que precisam de ajuda com pessoas dispostas a ajudar.</p>
-        <p style="font-size:20px">Unindo pessoas que precisam de ajuda com pessoas dispostas a ajudar.</p>
-        <p style="font-size:20px">Unindo pessoas que precisam de ajuda com pessoas dispostas a ajudar.</p>
-
+        <p style="font-size:25px">Unindo pessoas que precisam de ajuda com pessoas dispostas a ajudar.</p>
+        <div class="d-flex justify-content-evenly">
+          <div class="card">
+            <p>Juntas, ONGs colaboram para transformar vidas e lares.</p>
+          </div>
+          <div class="card">
+            <p>Doar utensílios domésticos e eletrônicos é uma forma de fazer a diferença.</p>
+          </div>
+          <div class="card">
+            <p>Cada contribuição em dinheiro nos aproxima da reforma que sonhamos.</p>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -111,7 +114,6 @@ export default {
 
 <style lang="css" src="@/assets/styles/basicbutton.css"></style>
 
-
 <style scoped>
 
 #section1{
@@ -127,5 +129,14 @@ h2 {
   text-transform: uppercase;
   margin-top: 20px;
   font-weight: bold;
+}
+
+.card{
+  padding: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 30%;
+  font-size: 20px;
 }
 </style>
