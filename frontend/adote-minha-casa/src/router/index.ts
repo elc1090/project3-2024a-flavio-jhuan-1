@@ -13,20 +13,17 @@ const router = createRouter({
       component: HomeView
     },
     {
-      path: '/login',
-      name: 'login',
-      component: Login,
-      meta: {
-        requiresNotAuth: true
-      }
-    },
-    {
       path: '/requirement',
       name: 'requirement',
       component: Requirement,
       meta: {
         requiresAuth: true
       }
+    },
+    {
+      path: '/login',
+      name: 'login',
+      component: Login
     },
     {
       path: '/search',
@@ -44,15 +41,11 @@ const router = createRouter({
 
 router.beforeEach((to, from, next) => {
   const requiresAuth = to.matched.some(record => record.meta.requiresAuth);
-  const requiresNotAuth = to.matched.some(record => record.meta.requiresNotAuth);
 
   const tokenExists = localStorage.getItem('TOKEN_KEY');
 
   if (requiresAuth && !tokenExists) {
     next('/login');
-  } 
-  else if (requiresNotAuth && tokenExists) {
-    next('/');
   }
   else {
     next();

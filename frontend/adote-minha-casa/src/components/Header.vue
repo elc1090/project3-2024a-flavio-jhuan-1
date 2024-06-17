@@ -23,7 +23,7 @@
             <li class="nav-item">
               <router-link class="nav-link text-white btn light-button" to="/requirement">Preciso de Ajuda</router-link>
             </li>
-            <li class="nav-item">
+            <li v-if="notloggedUser" class="nav-item">
               <router-link class="nav-link text-white btn light-button" to="/login">Entre ou Cadastre-se</router-link>
             </li>
           </ul>
@@ -40,9 +40,14 @@ export default {
   name: 'Header',
   data() {
     return {
-      logo
+      logo: logo,
+      notloggedUser: false
     };
-  }
+  },
+  mounted() {
+    const tokenExists = localStorage.getItem('TOKEN_KEY');
+    this.notloggedUser = !tokenExists;
+  },
 }
 </script>
 
