@@ -1,13 +1,11 @@
 <template>
   <div>
     <Header />
-
     <!-- Navbar de filtro de pesquisa -->
     <SearchFilters />
 
     <!-- Conteúdo -->
     <Album :items=carouselSlides />
-
 
     <Footer />
   </div>
@@ -150,8 +148,6 @@ export default {
 </script>
 
 <style scoped>
-section{
-}
 
 #section1{
   background-image: url('../assets/cerca.jpg');

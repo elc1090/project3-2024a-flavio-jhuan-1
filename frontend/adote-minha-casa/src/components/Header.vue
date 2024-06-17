@@ -3,31 +3,28 @@
   <header class="text-white">
     <div class="container d-flex justify-content-between align-items-center py-3">
       <div>
-        <a href="/" class="d-flex flex-column align-items-center" style="text-decoration: none;">
+        <router-link to="/" class="d-flex flex-column align-items-center" style="text-decoration: none;">
           <img :src="logo" alt="Logo" class="img-fluid mb-3" style="max-width:80px; max-height: 80px;">
           <p >Adote Minha Casa</p>
-        </a>
+        </router-link>
       </div>
       <nav class="navbar navbar-expand navbar-light wrap">
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav">
             <li class="nav-item active">
-              <a class="nav-link text-white btn light-button" href="/">Home</a>
+              <router-link class="nav-link text-white btn light-button" to="/">Home</router-link>
             </li>
             <li class="nav-item">
-              <a class="nav-link text-white btn light-button" href="/about">Sobre</a>
+              <router-link class="nav-link text-white btn light-button" to="/about">Sobre</router-link>
             </li>
             <li class="nav-item">
-              <a class="nav-link text-white btn light-button" href="/search">Quero Doar</a>
+              <router-link class="nav-link text-white btn light-button" to="/search">Quero Doar</router-link>
             </li>
             <li class="nav-item">
-              <a class="nav-link text-white btn light-button" href="/requirement">Preciso de Ajuda</a>
+              <router-link class="nav-link text-white btn light-button" to="/requirement">Preciso de Ajuda</router-link>
             </li>
             <li class="nav-item">
-              <a class="nav-link text-white btn light-button" href="/login">Login</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link text-white btn light-button" href="/login">Crie uma Conta</a>
+              <router-link class="nav-link text-white btn light-button" to="/login">Entre ou Cadastre-se</router-link>
             </li>
           </ul>
         </div>

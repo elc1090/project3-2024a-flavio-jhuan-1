@@ -10,7 +10,7 @@
           <label for="password">Senha:</label>
           <input type="password" id="password" v-model="password" required>
         </div>
-        <button type="submit" class="btn basicbutton" @click="login">Login</button>
+        <router-link type="submit" class="btn basicbutton" @click="login">Login</router-link>
       </form>
     </div>
 

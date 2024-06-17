@@ -3,8 +3,6 @@
   <main class="d-flex justify-content-evenly flex-wrap">
     <LoginForm />
     <SingUpForm />
-
-
   </main>
 
   <Footer />

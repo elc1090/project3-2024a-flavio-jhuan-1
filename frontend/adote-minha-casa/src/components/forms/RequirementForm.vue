@@ -33,7 +33,7 @@
           <input type="tel" id="phoneNumber" v-model="phoneNumber" required>
         </div>
         
-        <button type="submit" class="btn basicbutton">Abrir Requerimento</button>
+        <router-link type="submit" class="btn basicbutton">Abrir Requerimento</router-link>
       </form>
     </div>
 </template>

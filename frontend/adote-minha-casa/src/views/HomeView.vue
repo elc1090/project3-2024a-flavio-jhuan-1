@@ -25,8 +25,8 @@
       <div class="text-center d-flex flex-column align-items-center">
         <h2 class="mb-4">Comece a doar</h2>
         <Carousel :slides="carouselSlides"/>
-        <a href="/search" class="btn basicbutton" 
-          style="margin-top: 10px;">Ver mais</a>
+        <router-link to="/search" class="btn basicbutton" 
+          style="margin-top: 10px;">Ver mais</router-link>
       </div>
     </section>
     <Footer />
