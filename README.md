@@ -2,6 +2,8 @@
 
 O projeto 'Adote Minha Casa' visa unir pessoas carentes a doadores dispostos a transformar vidas através da solidariedade. Através de nossa plataforma, conectamos indivíduos e instituições com famílias em necessidade, proporcionando moradias dignas e oportunidades de reconstrução. Com transparência e compromisso com a mudança social, estamos construindo um futuro onde todos têm a chance de viver com dignidade e esperança.
 
+![homepage](https://github.com/elc1090/project3-2024a-flavio-jhuan-1/blob/main/homepage.png)
+
 Link do Deploy do Front:
 Link do Deploy do Back:
 
