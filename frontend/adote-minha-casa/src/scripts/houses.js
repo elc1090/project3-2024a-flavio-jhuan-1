@@ -21,6 +21,7 @@ export function getHouses() {
     .catch(error => console.error('Error:', error));
 }
 
+//atualiza casa? como eu sei que casa eu quero atualizar? eu ganho ID pra casa?
 export function putHouse(data) {
     fetch(housesUrl, {
     method: "PUT",

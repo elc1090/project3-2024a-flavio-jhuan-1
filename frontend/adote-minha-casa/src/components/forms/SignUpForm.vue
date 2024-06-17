@@ -12,6 +12,18 @@
           <input type="text" id="signname" v-model="name" required>
         </div>
         <div class="form-group">
+          <label for="phone">Telefone:</label>
+          <input type="text" id="phone" v-model="phone" required>
+        </div>
+        <div class="form-group">
+          <label for="city">Cidade:</label>
+          <input type="text" id="city" v-model="city" required>
+        </div>
+        <div class="form-group">
+          <label for="state">Estado:</label>
+          <input type="text" id="state" v-model="state" required>
+        </div>
+        <div class="form-group">
           <label for="signpassword">Senha:</label>
           <input type="password" id="signpassword" v-model="password" required>
         </div>
@@ -26,6 +38,7 @@
 </template>
 
 <script>
+import {sendPostRecipients} from '@/scripts/recipients.js';
 
 export default {
   name: 'SignUp',
@@ -34,7 +47,10 @@ export default {
       email: '',
       name: '',
       password: '',
-      passwordConf: ''
+      passwordConf: '',
+      phone: '',
+      city: '',
+      state: ''
     };
   },
   methods: {
@@ -44,8 +60,19 @@ export default {
       console.log('Password:', this.password);
       console.log('PasswordConf:', this.passwordConf);
 
+      data = {
+        "email": this.email,
+        "name": this.name,
+        "phone": this.phone,
+        "password": this.password,
+        "city": this.city,
+        "state": this.state
+      }
+
       if (this.password !== this.passwordConf) {
         alert('As senhas não conferem');
+      }else{
+        sendPostRecipients(data)
       }
     }
   }
