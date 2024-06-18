@@ -4,9 +4,9 @@ O projeto 'Adote Minha Casa' visa unir pessoas carentes a doadores dispostos a t
 
 ![homepage](https://github.com/elc1090/project3-2024a-flavio-jhuan-1/blob/main/homepage.png)
 
-Link do Deploy do Front
+Link do Deploy do Front: [aqui](https://adote-minha-casa-web.vercel.app/)
 
-Link do Deploy do Back:
+Link do Deploy do Back: [aqui](https://adote-minha-casa-api-ef5021418d25.herokuapp.com/)
 
 # Desenvolvedores
 
