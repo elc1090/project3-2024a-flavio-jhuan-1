@@ -6,7 +6,7 @@
     <p class="card-text">{{ description }}</p>
     <p><strong>Proprietário:</strong> {{ ownerName }}</p>
     <p><strong>Chave pix:</strong> {{ pixkey }}</p>
-    <button to="#" class="btn basicbutton" @click="handleButtonClick">Ajudar</button>
+    <router-link to="#" class="btn basicbutton" @click="accessDonatePage">Ajudar</router-link>
   </div>
 </div>
 </template>
@@ -41,10 +41,9 @@ export default {
     }
   },
   methods: {
-    handleButtonClick() {
-      // Lógica para o clique do botão
-      console.log('Botão clicado!', this.id);
-      alert('Botão clicado!' + this.id);
+    accessDonatePage() {
+      // console.log('Botão clicado!', this.id);
+      this.$router.push(`/page/${this.id}`);
     }
   },
 
