@@ -5,8 +5,8 @@
     <h5 class="card-title">{{ title }}</h5>
     <p class="card-text">{{ description }}</p>
     <p><strong>Proprietário:</strong> {{ ownerName }}</p>
-    <p><strong>Total Doado:</strong> {{ totalDonations }} R$</p>
-    <router-link to="#" class="btn basicbutton">Ajudar</router-link>
+    <p><strong>Chave pix:</strong> {{ pixkey }}</p>
+    <button to="#" class="btn basicbutton" @click="handleButtonClick">Ajudar</button>
   </div>
 </div>
 </template>
@@ -15,10 +15,10 @@
 export default {
   name: 'InfoCard',
   props: {
-    id : {
+    id: {
       type: String,
       required: true
-    } ,
+    },
     imageSrc: {
       type: String,
       required: true
@@ -35,7 +35,7 @@ export default {
       type: String,
       required: true
     },
-    totalDonations: {
+    pixkey: {
       type: String,
       required: true
     }
@@ -43,13 +43,10 @@ export default {
   methods: {
     handleButtonClick() {
       // Lógica para o clique do botão
+      console.log('Botão clicado!', this.id);
       alert('Botão clicado!' + this.id);
     }
   },
-  data() {
-    return {
-      id: ''
-    };
-  }
+
 };
 </script>

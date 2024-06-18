@@ -10,7 +10,7 @@
           <label for="password">Senha:</label>
           <input type="password" id="password" v-model="password" required>
         </div>
-        <router-link type="submit" class="btn basicbutton" @click="login">Login</router-link>
+        <button type="submit" class="btn basicbutton" @click="login">Login</button>
       </form>
     </div>
 
@@ -18,26 +18,38 @@
 
 <script>
 import {loginRecipient} from '@/scripts/recipients.js';
+import api from '@/services/api.js';
 
 export default {
   name: 'Login',
   data() {
     return {
-      email: '',
-      password: ''
+      model: {
+        email: "",
+        password: "",
+      },
     };
   },
   methods: {
-    login() {
+    async login() {
       console.log('Email:', this.email);
       console.log('Password:', this.password);
       
-      data = {
-        "email": this.email,
-        "password": this.password
+      const data = {
+        email: this.email,
+        password: this.password,
       };
-      
-      loginRecipient(data);
+      try{
+        console.log(data)
+        const response = await api.post('/login', data);
+        localStorage.setItem('TOKEN_KEY', response.data.token);
+        this.$router.push(`/`);
+
+        console.log("LOGIN FEITO COM SUCESSO", response);
+      } catch (error) {
+        console.error(error);
+      }
+
     }
   }
 };

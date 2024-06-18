@@ -31,7 +31,7 @@
           <label for="signpassword2">Confirme sua senha:</label>
           <input type="password" id="signpassword2" v-model="passwordConf" required>
         </div>
-        <router-link type="submit" class="btn basicbutton">SignUp</router-link>
+        <button type="submit" class="btn basicbutton">SignUp</button>
       </form>
     </div>
 
@@ -39,6 +39,7 @@
 
 <script>
 import {sendPostRecipients} from '@/scripts/recipients.js';
+import api from '@/services/api.js';
 
 export default {
   name: 'SignUp',
@@ -54,13 +55,13 @@ export default {
     };
   },
   methods: {
-    sign_up() {
+    async sign_up() {
       console.log('Email:', this.email);
       console.log('Name:', this.name);
       console.log('Password:', this.password);
       console.log('PasswordConf:', this.passwordConf);
 
-      data = {
+      const data = {
         "email": this.email,
         "name": this.name,
         "phone": this.phone,
@@ -72,7 +73,13 @@ export default {
       if (this.password !== this.passwordConf) {
         alert('As senhas não conferem');
       }else{
-        sendPostRecipients(data)
+        try{
+          const response = await api.post('/recipients', data);
+          console.log(response);
+        } catch (error) {
+          console.error(error);
+        }
+        
       }
     }
   }

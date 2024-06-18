@@ -33,13 +33,14 @@
           <input type="tel" id="phoneNumber" v-model="phoneNumber" required>
         </div>
         
-        <router-link type="submit" class="btn basicbutton">Abrir Requerimento</router-link>
+        <button type="submit" class="btn basicbutton">Abrir Requerimento</button>
       </form>
     </div>
 </template>
 
 <script>
 import {sendPostHouses} from '@/scripts/houses.js';
+import api from '@/services/api.js';
 
 export default {
   name: 'RequirementForm',
@@ -60,8 +61,8 @@ export default {
     };
   },
   methods: {
-    submit() {
-      data = {
+    async submit() {
+      const data = {
         "cadastred_by_user_id": "1",
         "title": this.title,
         "description": this.description,
@@ -69,13 +70,14 @@ export default {
         "address": this.address,
         "city": this.city,
         "state": this.state,
-        // "value": this.value,
-        // "bairro": this.bairro,
-        // "cep": this.cep,
-        // "phoneNumber": this.phoneNumber
+        "value": this.value,
+        "bairro": this.bairro,
+        "cep": this.cep,
+        "number": this.phoneNumber
         //
       };
-      sendPostHouses(data);
+      const response = await api.post('/houses', data);
+      console.log(response);
     },
 
     handle_cep(event) {

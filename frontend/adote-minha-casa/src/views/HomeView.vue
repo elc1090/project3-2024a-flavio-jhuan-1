@@ -38,6 +38,7 @@ import Header from '@/components/Header.vue'
 import Footer from '@/components/Footer.vue'
 import InfoCard from '@/components/InfoCard.vue';
 import Carousel from '@/components/Carousel.vue';
+import api from '@/services/api.js';
 
 export default {
   name: 'HomePage',
@@ -50,65 +51,32 @@ export default {
 
   data() {
     return {
-      carouselSlides: [ 
-        {
+      carouselSlides: []
+    }
+  },
+  async beforeMount() {
+    try {
+      const { data } = await api.get('/houses');
+
+      this.carouselSlides = data.map(item => {
+        return {
           component: InfoCard,
           props: {
-            id: "2",
-            imageSrc: "https://www.petz.com.br/blog/wp-content/uploads/2021/04/raca-de-cachorro-docil-2.jpg",
-            title: "Título",
-            description: "Minha casa caiu",
-            ownerName: "Marsio",
-            totalDonations: "987651"
-          }
-        },
-        {
-          component: InfoCard,
-          props: {
-            id: "3",
-            imageSrc: "https://www.petz.com.br/blog/wp-content/uploads/2021/04/raca-de-cachorro-docil-2.jpg",
-            title: "Título",
-            description: "Minha casa subiu",
-            ownerName: "Marsio",
-            totalDonations: "987651"
-          }
-        },
-        {
-          component: InfoCard,
-          props: {
-            id: "4",
-            imageSrc: "https://www.petz.com.br/blog/wp-content/uploads/2021/04/raca-de-cachorro-docil-2.jpg",
-            title: "Título",
-            description: "Minha casa morreu",
-            ownerName: "Marsio",
-            totalDonations: "987651"
-          }
-        },
-        {
-          component: InfoCard,
-          props: {
-            id: "4",
-            imageSrc: "https://www.petz.com.br/blog/wp-content/uploads/2021/04/raca-de-cachorro-docil-2.jpg",
-            title: "Título",
-            description: "Minha casa fugiu",
-            ownerName: "Marsio",
-            totalDonations: "987651"
-          }
-        },
-        {
-          component: InfoCard,
-          props: {
-            id: "4",
-            imageSrc: "https://www.petz.com.br/blog/wp-content/uploads/2021/04/raca-de-cachorro-docil-2.jpg",
-            title: "Título",
-            description: "Minha casa AA folou",
-            ownerName: "Marsio",
-            totalDonations: "987651"
+            id: item.id,
+            imageSrc: item.file_url || "https://www.petz.com.br/blog/wp-content/uploads/2021/04/raca-de-cachorro-docil-2.jpg", // Use uma imagem padrão se `file_url` for null
+            title: item.title,
+            description: item.description,
+            ownerName: item.recipient.name,
+            pixkey: item.pixkey
           }
         }
-      ]
+      });
+    } catch (error) {
+      console.error("Erro ao obter dados das casas", error);
     }
   }
+
+ 
 }
 </script>
 
